@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35C387F326323C2000141DC4 /* PlaylistResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F026323C2000141DC4 /* PlaylistResponseModel.swift */; };
+		35C387F426323C2000141DC4 /* NetworkHelperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F126323C2000141DC4 /* NetworkHelperProtocols.swift */; };
+		35C387F526323C2000141DC4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F226323C2000141DC4 /* NetworkManager.swift */; };
+		35C387FD2632471800141DC4 /* PlaylistEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387FC2632471800141DC4 /* PlaylistEndPoint.swift */; };
+		35C3880626324F9900141DC4 /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3880526324F9900141DC4 /* TrackListViewModel.swift */; };
+		35C3881F2633050000141DC4 /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3881E2633050000141DC4 /* EndPointProtocol.swift */; };
+		35C3882D263305E700141DC4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3882C263305E700141DC4 /* NetworkError.swift */; };
+		35C388322633062C00141DC4 /* JSONParamEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C388312633062C00141DC4 /* JSONParamEncoder.swift */; };
 		DED886352555588D00A37DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED886342555588D00A37DC2 /* AppDelegate.swift */; };
 		DED886372555588D00A37DC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED886362555588D00A37DC2 /* SceneDelegate.swift */; };
-		DED886392555588D00A37DC2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED886382555588D00A37DC2 /* FirstViewController.swift */; };
-		DED8863B2555588D00A37DC2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED8863A2555588D00A37DC2 /* SecondViewController.swift */; };
-		DED8863E2555588D00A37DC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED8863C2555588D00A37DC2 /* Main.storyboard */; };
-		DED886412555588D00A37DC2 /* iOSRefactoringChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DED8863F2555588D00A37DC2 /* iOSRefactoringChallenge.xcdatamodeld */; };
+		DED886392555588D00A37DC2 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED886382555588D00A37DC2 /* TrackListViewController.swift */; };
+		DED8863E2555588D00A37DC2 /* PlayList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED8863C2555588D00A37DC2 /* PlayList.storyboard */; };
+		DED886412555588D00A37DC2 /* database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DED8863F2555588D00A37DC2 /* database.xcdatamodeld */; };
 		DED886432555589000A37DC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DED886422555589000A37DC2 /* Assets.xcassets */; };
 		DED886462555589000A37DC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED886442555589000A37DC2 /* LaunchScreen.storyboard */; };
 		DED886512555589000A37DC2 /* iOSRefactoringChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED886502555589000A37DC2 /* iOSRefactoringChallengeTests.swift */; };
@@ -37,12 +44,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35C387F026323C2000141DC4 /* PlaylistResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistResponseModel.swift; sourceTree = "<group>"; };
+		35C387F126323C2000141DC4 /* NetworkHelperProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelperProtocols.swift; sourceTree = "<group>"; };
+		35C387F226323C2000141DC4 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		35C387FC2632471800141DC4 /* PlaylistEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistEndPoint.swift; sourceTree = "<group>"; };
+		35C3880526324F9900141DC4 /* TrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModel.swift; sourceTree = "<group>"; };
+		35C3881E2633050000141DC4 /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
+		35C3882C263305E700141DC4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		35C388312633062C00141DC4 /* JSONParamEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParamEncoder.swift; sourceTree = "<group>"; };
 		DED886312555588D00A37DC2 /* iOSRefactoringChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSRefactoringChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED886342555588D00A37DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED886362555588D00A37DC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DED886382555588D00A37DC2 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DED8863A2555588D00A37DC2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		DED8863D2555588D00A37DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DED886382555588D00A37DC2 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
+		DED8863D2555588D00A37DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PlayList.storyboard; sourceTree = "<group>"; };
 		DED886402555588D00A37DC2 /* iOS_candidate_challenge_for_refactor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_candidate_challenge_for_refactor.xcdatamodel; sourceTree = "<group>"; };
 		DED886422555589000A37DC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DED886452555589000A37DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +94,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352F88A92631D921002371C5 /* PlayListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				35C388132633006900141DC4 /* Storyboard */,
+				DED886382555588D00A37DC2 /* TrackListViewController.swift */,
+				35C3880526324F9900141DC4 /* TrackListViewModel.swift */,
+			);
+			path = PlayListScreen;
+			sourceTree = "<group>";
+		};
+		35C387EE26323C2000141DC4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				35C387F226323C2000141DC4 /* NetworkManager.swift */,
+				35C3881E2633050000141DC4 /* EndPointProtocol.swift */,
+				35C38804263249EF00141DC4 /* playlistEndPoint */,
+				35C388172633040700141DC4 /* NetworkHelpers */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		35C387EF26323C2000141DC4 /* response model */ = {
+			isa = PBXGroup;
+			children = (
+				35C387F026323C2000141DC4 /* PlaylistResponseModel.swift */,
+			);
+			path = "response model";
+			sourceTree = "<group>";
+		};
+		35C38804263249EF00141DC4 /* playlistEndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				35C387FC2632471800141DC4 /* PlaylistEndPoint.swift */,
+				35C387EF26323C2000141DC4 /* response model */,
+			);
+			path = playlistEndPoint;
+			sourceTree = "<group>";
+		};
+		35C388132633006900141DC4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DED8863C2555588D00A37DC2 /* PlayList.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		35C388172633040700141DC4 /* NetworkHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				35C387F126323C2000141DC4 /* NetworkHelperProtocols.swift */,
+				35C3882C263305E700141DC4 /* NetworkError.swift */,
+				35C388312633062C00141DC4 /* JSONParamEncoder.swift */,
+			);
+			path = NetworkHelpers;
+			sourceTree = "<group>";
+		};
 		DED886282555588D00A37DC2 = {
 			isa = PBXGroup;
 			children = (
@@ -103,15 +173,14 @@
 		DED886332555588D00A37DC2 /* iOSRefactoringChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				35C387EE26323C2000141DC4 /* Networking */,
+				352F88A92631D921002371C5 /* PlayListScreen */,
 				DED886342555588D00A37DC2 /* AppDelegate.swift */,
 				DED886362555588D00A37DC2 /* SceneDelegate.swift */,
-				DED886382555588D00A37DC2 /* FirstViewController.swift */,
-				DED8863A2555588D00A37DC2 /* SecondViewController.swift */,
-				DED8863C2555588D00A37DC2 /* Main.storyboard */,
 				DED886422555589000A37DC2 /* Assets.xcassets */,
 				DED886442555589000A37DC2 /* LaunchScreen.storyboard */,
 				DED886472555589000A37DC2 /* Info.plist */,
-				DED8863F2555588D00A37DC2 /* iOSRefactoringChallenge.xcdatamodeld */,
+				DED8863F2555588D00A37DC2 /* database.xcdatamodeld */,
 			);
 			path = iOSRefactoringChallenge;
 			sourceTree = "<group>";
@@ -198,7 +267,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1170;
-				ORGANIZATIONNAME = "SoundCloud";
+				ORGANIZATIONNAME = SoundCloud;
 				TargetAttributes = {
 					DED886302555588D00A37DC2 = {
 						CreatedOnToolsVersion = 11.7;
@@ -240,7 +309,7 @@
 			files = (
 				DED886462555589000A37DC2 /* LaunchScreen.storyboard in Resources */,
 				DED886432555589000A37DC2 /* Assets.xcassets in Resources */,
-				DED8863E2555588D00A37DC2 /* Main.storyboard in Resources */,
+				DED8863E2555588D00A37DC2 /* PlayList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,11 +334,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED886412555588D00A37DC2 /* iOSRefactoringChallenge.xcdatamodeld in Sources */,
-				DED8863B2555588D00A37DC2 /* SecondViewController.swift in Sources */,
-				DED886392555588D00A37DC2 /* FirstViewController.swift in Sources */,
+				DED886412555588D00A37DC2 /* database.xcdatamodeld in Sources */,
+				35C387F526323C2000141DC4 /* NetworkManager.swift in Sources */,
+				35C3881F2633050000141DC4 /* EndPointProtocol.swift in Sources */,
+				35C387F326323C2000141DC4 /* PlaylistResponseModel.swift in Sources */,
+				35C388322633062C00141DC4 /* JSONParamEncoder.swift in Sources */,
+				35C3880626324F9900141DC4 /* TrackListViewModel.swift in Sources */,
+				35C387F426323C2000141DC4 /* NetworkHelperProtocols.swift in Sources */,
+				DED886392555588D00A37DC2 /* TrackListViewController.swift in Sources */,
 				DED886352555588D00A37DC2 /* AppDelegate.swift in Sources */,
 				DED886372555588D00A37DC2 /* SceneDelegate.swift in Sources */,
+				35C3882D263305E700141DC4 /* NetworkError.swift in Sources */,
+				35C387FD2632471800141DC4 /* PlaylistEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,12 +381,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DED8863C2555588D00A37DC2 /* Main.storyboard */ = {
+		DED8863C2555588D00A37DC2 /* PlayList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DED8863D2555588D00A37DC2 /* Base */,
 			);
-			name = Main.storyboard;
+			name = PlayList.storyboard;
 			sourceTree = "<group>";
 		};
 		DED886442555589000A37DC2 /* LaunchScreen.storyboard */ = {
@@ -445,6 +521,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DYCE69573Q;
 				INFOPLIST_FILE = "$(SRCROOT)/iOSRefactoringChallenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,6 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DYCE69573Q;
 				INFOPLIST_FILE = "$(SRCROOT)/iOSRefactoringChallenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -600,13 +678,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DED8863F2555588D00A37DC2 /* iOSRefactoringChallenge.xcdatamodeld */ = {
+		DED8863F2555588D00A37DC2 /* database.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				DED886402555588D00A37DC2 /* iOS_candidate_challenge_for_refactor.xcdatamodel */,
 			);
 			currentVersion = DED886402555588D00A37DC2 /* iOS_candidate_challenge_for_refactor.xcdatamodel */;
-			path = iOSRefactoringChallenge.xcdatamodeld;
+			path = database.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
