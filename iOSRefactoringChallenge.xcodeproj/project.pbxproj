@@ -15,6 +15,8 @@
 		35C3881F2633050000141DC4 /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3881E2633050000141DC4 /* EndPointProtocol.swift */; };
 		35C3882D263305E700141DC4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3882C263305E700141DC4 /* NetworkError.swift */; };
 		35C388322633062C00141DC4 /* JSONParamEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C388312633062C00141DC4 /* JSONParamEncoder.swift */; };
+		35C3883D26330CB600141DC4 /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3883C26330CB600141DC4 /* NetworkLayerTests.swift */; };
+		35C388482633156200141DC4 /* TrackListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C388472633156200141DC4 /* TrackListViewControllerTests.swift */; };
 		DED886352555588D00A37DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED886342555588D00A37DC2 /* AppDelegate.swift */; };
 		DED886372555588D00A37DC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED886362555588D00A37DC2 /* SceneDelegate.swift */; };
 		DED886392555588D00A37DC2 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED886382555588D00A37DC2 /* TrackListViewController.swift */; };
@@ -22,7 +24,6 @@
 		DED886412555588D00A37DC2 /* database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DED8863F2555588D00A37DC2 /* database.xcdatamodeld */; };
 		DED886432555589000A37DC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DED886422555589000A37DC2 /* Assets.xcassets */; };
 		DED886462555589000A37DC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED886442555589000A37DC2 /* LaunchScreen.storyboard */; };
-		DED886512555589000A37DC2 /* iOSRefactoringChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED886502555589000A37DC2 /* iOSRefactoringChallengeTests.swift */; };
 		DED8865C2555589000A37DC2 /* iOSRefactoringChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED8865B2555589000A37DC2 /* iOSRefactoringChallengeUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,8 @@
 		35C3881E2633050000141DC4 /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
 		35C3882C263305E700141DC4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		35C388312633062C00141DC4 /* JSONParamEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParamEncoder.swift; sourceTree = "<group>"; };
+		35C3883C26330CB600141DC4 /* NetworkLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTests.swift; sourceTree = "<group>"; };
+		35C388472633156200141DC4 /* TrackListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewControllerTests.swift; sourceTree = "<group>"; };
 		DED886312555588D00A37DC2 /* iOSRefactoringChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSRefactoringChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED886342555588D00A37DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED886362555588D00A37DC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +65,6 @@
 		DED886452555589000A37DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DED886472555589000A37DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DED8864C2555589000A37DC2 /* iOSRefactoringChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSRefactoringChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DED886502555589000A37DC2 /* iOSRefactoringChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSRefactoringChallengeTests.swift; sourceTree = "<group>"; };
 		DED886522555589000A37DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DED886572555589000A37DC2 /* iOSRefactoringChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSRefactoringChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED8865B2555589000A37DC2 /* iOSRefactoringChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSRefactoringChallengeUITests.swift; sourceTree = "<group>"; };
@@ -188,8 +190,9 @@
 		DED8864F2555589000A37DC2 /* iOSRefactoringChalengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				DED886502555589000A37DC2 /* iOSRefactoringChallengeTests.swift */,
 				DED886522555589000A37DC2 /* Info.plist */,
+				35C3883C26330CB600141DC4 /* NetworkLayerTests.swift */,
+				35C388472633156200141DC4 /* TrackListViewControllerTests.swift */,
 			);
 			path = iOSRefactoringChalengeTests;
 			sourceTree = "<group>";
@@ -353,7 +356,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED886512555589000A37DC2 /* iOSRefactoringChallengeTests.swift in Sources */,
+				35C388482633156200141DC4 /* TrackListViewControllerTests.swift in Sources */,
+				35C3883D26330CB600141DC4 /* NetworkLayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
