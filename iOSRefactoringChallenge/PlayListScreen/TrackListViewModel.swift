@@ -8,8 +8,17 @@
 
 import Foundation
 
-struct TrackListViewModel {
-    var provider: NetworkManagerProtocol = NetworkClient(baseURL: Constants.baseURL)
+protocol TrackListViewModelProtocol {
+    var provider: NetworkClientProtocol { get }
+    var tracks: [Track] { get set }
+    var loadingErrorClosure: (() -> Void)? { get set }
+    
+    func fetchTracks(completion: (([Track]) -> Void)?)
+    func trackTitle(for indexPath: IndexPath) -> String
+}
+
+struct TrackListViewModel: TrackListViewModelProtocol {
+    var provider: NetworkClientProtocol = NetworkClient(baseURL: Constants.baseURL)
     var tracks: [Track] = []
     var loadingErrorClosure: (() -> Void)?
 
@@ -24,10 +33,6 @@ struct TrackListViewModel {
             }
             completion?(tracks)
         }
-    }
-
-    func numberOfTracks() -> Int {
-        return tracks.count
     }
 
     func trackTitle(for indexPath: IndexPath) -> String {

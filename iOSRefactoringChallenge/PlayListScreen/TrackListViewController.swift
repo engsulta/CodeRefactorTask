@@ -1,9 +1,9 @@
 import UIKit
 
 class TrackListViewController: UIViewController{
-    var tableView: UITableView?
-    var viewModel: TrackListViewModel = TrackListViewModel()
-    let cellIdentifier = "Cell"
+    private var tableView: UITableView?
+    var viewModel: TrackListViewModelProtocol? = TrackListViewModel()
+    private let cellIdentifier = "Cell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +26,13 @@ class TrackListViewController: UIViewController{
 
     /// setup trackViewModel
     func initVM(completion: (() -> Void)? = nil) {
-        viewModel.loadingErrorClosure = showErrorAlert
-        viewModel.fetchTracks { [weak self] tracks in
+        /// setup trackViewModel
+        viewModel?.loadingErrorClosure = showErrorAlert
+
+        /// then start fetch
+        viewModel?.fetchTracks { [weak self] tracks in
             guard let self = self else { return }
-            self.viewModel.tracks = tracks
+            self.viewModel?.tracks = tracks
             self.tableView?.reloadData()
             completion?()
         }
@@ -45,14 +48,16 @@ class TrackListViewController: UIViewController{
     }
 }
 
+
+// MARK:- UITableViewDataSource, UITableViewDelegate
 extension TrackListViewController: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.tracks.count
+        return viewModel?.tracks.count ?? 0
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
-        cell.textLabel?.text = viewModel.trackTitle(for: indexPath)
+        cell.textLabel?.text = viewModel?.trackTitle(for: indexPath)
         return cell
     }
 }

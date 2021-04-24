@@ -2,7 +2,7 @@ import Foundation
 typealias NetworkCompletion = (_ response: Decodable?, _ error: NetworkError?) -> Void
 
 /// protocol for client api
-protocol NetworkManagerProtocol {
+protocol NetworkClientProtocol {
     var session: URLSessionProtocol { get }
     var baseURL: String { get }
     @discardableResult
@@ -12,7 +12,7 @@ protocol NetworkManagerProtocol {
 }
 
 /// concrete implementation for the client protocol
-class NetworkClient: NetworkManagerProtocol {
+class NetworkClient: NetworkClientProtocol {
     var baseURL: String
     var session: URLSessionProtocol
 
@@ -24,7 +24,7 @@ class NetworkClient: NetworkManagerProtocol {
 }
 
 // MARK: - fetch implementation
-extension NetworkManagerProtocol {
+extension NetworkClientProtocol {
     @discardableResult
     func fetch<T: Decodable>(endPoint: EndPointProtocol,
                             model: T.Type,
