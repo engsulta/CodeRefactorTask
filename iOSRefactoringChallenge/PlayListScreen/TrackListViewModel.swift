@@ -1,11 +1,3 @@
-//
-//  TrackListViewModel.swift
-//  iOSRefactoringChallenge
-//
-//  Created by Ahmed Sultan on 23/04/2021.
-//  Copyright © 2021 SoundCloud. All rights reserved.
-//
-
 import Foundation
 
 protocol TrackListViewModelProtocol {

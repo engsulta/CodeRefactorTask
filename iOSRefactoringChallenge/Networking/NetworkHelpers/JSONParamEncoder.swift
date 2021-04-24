@@ -12,9 +12,9 @@ struct JSONParamEncoder {
         }
         urlComponents.setQueryItems(with: parameters)
         urlRequest.url = urlComponents.url
-//        if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
-//            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//        }
+        if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        }
     }
 }
 

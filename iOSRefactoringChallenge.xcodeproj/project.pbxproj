@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		35C387F326323C2000141DC4 /* PlaylistResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F026323C2000141DC4 /* PlaylistResponseModel.swift */; };
 		35C387F426323C2000141DC4 /* NetworkHelperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F126323C2000141DC4 /* NetworkHelperProtocols.swift */; };
-		35C387F526323C2000141DC4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F226323C2000141DC4 /* NetworkManager.swift */; };
+		35C387F526323C2000141DC4 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F226323C2000141DC4 /* NetworkClient.swift */; };
 		35C387FD2632471800141DC4 /* PlaylistEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387FC2632471800141DC4 /* PlaylistEndPoint.swift */; };
 		35C3880626324F9900141DC4 /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3880526324F9900141DC4 /* TrackListViewModel.swift */; };
 		35C3881F2633050000141DC4 /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3881E2633050000141DC4 /* EndPointProtocol.swift */; };
@@ -21,7 +21,6 @@
 		DED886372555588D00A37DC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED886362555588D00A37DC2 /* SceneDelegate.swift */; };
 		DED886392555588D00A37DC2 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED886382555588D00A37DC2 /* TrackListViewController.swift */; };
 		DED8863E2555588D00A37DC2 /* PlayList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED8863C2555588D00A37DC2 /* PlayList.storyboard */; };
-		DED886412555588D00A37DC2 /* database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DED8863F2555588D00A37DC2 /* database.xcdatamodeld */; };
 		DED886432555589000A37DC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DED886422555589000A37DC2 /* Assets.xcassets */; };
 		DED886462555589000A37DC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED886442555589000A37DC2 /* LaunchScreen.storyboard */; };
 		DED8865C2555589000A37DC2 /* iOSRefactoringChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED8865B2555589000A37DC2 /* iOSRefactoringChallengeUITests.swift */; };
@@ -47,7 +46,7 @@
 /* Begin PBXFileReference section */
 		35C387F026323C2000141DC4 /* PlaylistResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistResponseModel.swift; sourceTree = "<group>"; };
 		35C387F126323C2000141DC4 /* NetworkHelperProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelperProtocols.swift; sourceTree = "<group>"; };
-		35C387F226323C2000141DC4 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		35C387F226323C2000141DC4 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		35C387FC2632471800141DC4 /* PlaylistEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistEndPoint.swift; sourceTree = "<group>"; };
 		35C3880526324F9900141DC4 /* TrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModel.swift; sourceTree = "<group>"; };
 		35C3881E2633050000141DC4 /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
@@ -60,7 +59,6 @@
 		DED886362555588D00A37DC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DED886382555588D00A37DC2 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
 		DED8863D2555588D00A37DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PlayList.storyboard; sourceTree = "<group>"; };
-		DED886402555588D00A37DC2 /* iOS_candidate_challenge_for_refactor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_candidate_challenge_for_refactor.xcdatamodel; sourceTree = "<group>"; };
 		DED886422555589000A37DC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DED886452555589000A37DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DED886472555589000A37DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,7 +107,7 @@
 		35C387EE26323C2000141DC4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				35C387F226323C2000141DC4 /* NetworkManager.swift */,
+				35C387F226323C2000141DC4 /* NetworkClient.swift */,
 				35C3881E2633050000141DC4 /* EndPointProtocol.swift */,
 				35C38804263249EF00141DC4 /* playlistEndPoint */,
 				35C388172633040700141DC4 /* NetworkHelpers */,
@@ -182,7 +180,6 @@
 				DED886422555589000A37DC2 /* Assets.xcassets */,
 				DED886442555589000A37DC2 /* LaunchScreen.storyboard */,
 				DED886472555589000A37DC2 /* Info.plist */,
-				DED8863F2555588D00A37DC2 /* database.xcdatamodeld */,
 			);
 			path = iOSRefactoringChallenge;
 			sourceTree = "<group>";
@@ -337,8 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED886412555588D00A37DC2 /* database.xcdatamodeld in Sources */,
-				35C387F526323C2000141DC4 /* NetworkManager.swift in Sources */,
+				35C387F526323C2000141DC4 /* NetworkClient.swift in Sources */,
 				35C3881F2633050000141DC4 /* EndPointProtocol.swift in Sources */,
 				35C387F326323C2000141DC4 /* PlaylistResponseModel.swift in Sources */,
 				35C388322633062C00141DC4 /* JSONParamEncoder.swift in Sources */,
@@ -614,9 +610,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iOSRefactoringChallengeTestsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "iOS-candidate-challenge-for-refactor";
+				TEST_TARGET_NAME = iOSRefactoringChallenge;
 			};
 			name = Debug;
 		};
@@ -634,9 +631,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iOSRefactoringChallengeTestsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "iOS-candidate-challenge-for-refactor";
+				TEST_TARGET_NAME = iOSRefactoringChallenge;
 			};
 			name = Release;
 		};
@@ -680,19 +678,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DED8863F2555588D00A37DC2 /* database.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DED886402555588D00A37DC2 /* iOS_candidate_challenge_for_refactor.xcdatamodel */,
-			);
-			currentVersion = DED886402555588D00A37DC2 /* iOS_candidate_challenge_for_refactor.xcdatamodel */;
-			path = database.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DED886292555588D00A37DC2 /* Project object */;
 }

@@ -5,17 +5,16 @@ import XCTest
 class TrackListViewControllerTests: XCTestCase {
 
     var viewController: TrackListViewController!
-    var mockNetworkManager: NetworkClient!
-    var mockSession: MockSession!
+    var viewModel: TrackListViewModelProtocol!
 
     override func setUp() {
         super.setUp()
         let storyboard = UIStoryboard(name: "PlayList", bundle: Bundle.main)
         let storyboardVC = storyboard.instantiateViewController(withIdentifier: "TrackListViewController") as! TrackListViewController
         viewController = storyboardVC
-        mockSession = MockSession()
-        mockNetworkManager = NetworkClient(baseURL: Constants.baseURL, session: mockSession)
-        viewController.viewModel.provider = mockNetworkManager
+        viewModel = MockViewModel(provider: NetworkClient(baseURL: "",
+                                                          session: MockSession()))
+        viewController.viewModel = viewModel
         viewController.loadViewIfNeeded()
     }
 
@@ -30,9 +29,24 @@ class TrackListViewControllerTests: XCTestCase {
 
     override func tearDown() {
         viewController = nil
-        mockNetworkManager = nil
-        mockSession = nil
         super.tearDown()
     }
+
+}
+struct MockViewModel: TrackListViewModelProtocol {
+    var provider: NetworkClientProtocol
+
+    var tracks: [Track] = []
+
+    var loadingErrorClosure: (() -> Void)?
+
+    func fetchTracks(completion: (([Track]) -> Void)?) {
+        completion?([])
+    }
+
+    func trackTitle(for indexPath: IndexPath) -> String {
+        return ""
+    }
+
 
 }

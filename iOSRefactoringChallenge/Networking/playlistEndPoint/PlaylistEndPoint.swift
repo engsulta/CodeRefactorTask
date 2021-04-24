@@ -10,7 +10,7 @@ enum PlaylistEndPoint: EndPointProtocol {
         switch self {
         case .playlist:
             return .get
-        case .futureUse:
+        default: 
             return .post
         }
     }

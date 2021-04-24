@@ -13,6 +13,7 @@ class TrackListViewController: UIViewController{
 
     func setupUI() {
         let tableView = UITableView()
+        tableView.accessibilityIdentifier = "tableId"
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
