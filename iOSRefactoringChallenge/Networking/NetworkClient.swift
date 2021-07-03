@@ -1,18 +1,50 @@
 import Foundation
+import RxSwift
 typealias NetworkCompletion = (_ response: Decodable?, _ error: NetworkError?) -> Void
+typealias NetworkDataCompletion<T: Decodable> = (_ result: Result<T,Error>) -> Void
+extension Reactive where Base: NetworkClientProtocol {
+    func request<T: Decodable>(_ endPoint: EndPointProtocol, model: T.Type) -> Single<Decodable> {
+        return Single.create { [weak base] single in
+//            let cancellable = base?.fetch(endPoint: endPoint, model: model) { result in
+//                switch result {
+//                case let .success(response):
+//                    single(.success(response))
+//                case let .failure(error):
+//                    single(.failure(error))
+//                }
+//            }
+            let cancellable = base?.fetch(endPoint: endPoint, model: model) { model, error in
+                if let model = model , error == nil {
+                    single(.success(model))
+                }else if let error = error {
+                    single(.failure(error))
+                }
+            }
+            return Disposables.create {
+                cancellable?.cancel()
+            }
+        }
+    }
+}
+
+
 
 /// protocol for client api
-protocol NetworkClientProtocol {
+protocol NetworkClientProtocol: AnyObject, ReactiveCompatible {
     var session: URLSessionProtocol { get }
     var baseURL: String { get }
     @discardableResult
     func fetch<T: Decodable>(endPoint: EndPointProtocol,
                             model: T.Type,
                             completion: @escaping NetworkCompletion) -> Cancellable?
+    func fetchData<T: Decodable>(endPoint: EndPointProtocol,
+                            model: T.Type,
+                            completion: @escaping NetworkDataCompletion<T>) -> Cancellable?
 }
 
 /// concrete implementation for the client protocol
 class NetworkClient: NetworkClientProtocol {
+
     var baseURL: String
     var session: URLSessionProtocol
 
@@ -25,6 +57,17 @@ class NetworkClient: NetworkClientProtocol {
 
 // MARK: - fetch implementation
 extension NetworkClientProtocol {
+    func fetchData<T: Decodable>(endPoint: EndPointProtocol,
+                  model: T.Type,
+                  completion: @escaping NetworkDataCompletion<T>) -> Cancellable? {
+        fetch(endPoint: endPoint, model: model) { model, error in
+            if let _ = error {
+                completion(.failure(NetworkError.missingURL))
+            }else {
+                completion(.success(model as! T))
+            }
+        }
+    }
     @discardableResult
     func fetch<T: Decodable>(endPoint: EndPointProtocol,
                             model: T.Type,

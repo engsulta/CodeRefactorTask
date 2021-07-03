@@ -1,7 +1,8 @@
 import Foundation
-
+import RxSwift
+import RxCocoa
 protocol TrackListViewModelProtocol {
-    var provider: NetworkClientProtocol { get }
+    var provider: NetworkClient { get }
     var tracks: [Track] { get set }
     var loadingErrorClosure: (() -> Void)? { get set }
     
@@ -10,21 +11,34 @@ protocol TrackListViewModelProtocol {
 }
 
 struct TrackListViewModel: TrackListViewModelProtocol {
-    var provider: NetworkClientProtocol = NetworkClient(baseURL: Constants.baseURL)
+    var provider: NetworkClient = NetworkClient(baseURL: Constants.baseURL)
     var tracks: [Track] = []
     var loadingErrorClosure: (() -> Void)?
+    let disposeBag: DisposeBag = DisposeBag()
 
     func fetchTracks(completion: (([Track]) -> Void)?) {
-        provider.fetch(endPoint: PlaylistEndPoint.playlist(playlistId: Constants.playlistId),
-                       model: PlayListResponseModel.self) { response, error in
-            guard error == nil,
-                  let tracks = (response as? PlayListResponseModel)?.tracks else {
-                completion?([])
-                loadingErrorClosure?()
-                return
-            }
-            completion?(tracks)
-        }
+        provider
+            .rx
+            .request(PlaylistEndPoint.playlist(playlistId: Constants.playlistId), model: PlayListResponseModel.self)
+            .asObservable()
+            .subscribe({
+                event in
+                switch event {
+                case .next(let model):
+                    guard
+                          let tracks = (model as? PlayListResponseModel)?.tracks else {
+                        completion?([])
+                        loadingErrorClosure?()
+                        return
+                    }
+                    completion?(tracks)
+                case .error(let error):
+                    print("error \(error.localizedDescription)")
+                    loadingErrorClosure?()
+                case .completed:
+                    print("completed")
+                }
+            }).disposed(by: disposeBag)
     }
 
     func trackTitle(for indexPath: IndexPath) -> String {
