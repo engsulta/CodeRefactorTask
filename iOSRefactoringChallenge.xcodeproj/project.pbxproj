@@ -3,11 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2F3CCD092B00A77B29FC87BA /* Pods_iOSRefactoringChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DEF56A0A44B213456DEBF5 /* Pods_iOSRefactoringChallenge.framework */; };
+		356B46A62694B0BF001EDA9E /* Feature.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356B46A52694B0BF001EDA9E /* Feature.storyboard */; };
+		356B46A82694B14F001EDA9E /* FeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B46A72694B14F001EDA9E /* FeatureViewController.swift */; };
+		356B46AD2694B182001EDA9E /* FeaturePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B46AC2694B182001EDA9E /* FeaturePresenter.swift */; };
+		356B46B02694B1A0001EDA9E /* FeatureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B46AF2694B1A0001EDA9E /* FeatureUseCase.swift */; };
+		356B46B22694B1BF001EDA9E /* FeatureRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B46B12694B1BF001EDA9E /* FeatureRepository.swift */; };
+		356B46B52694B1F7001EDA9E /* FeatureDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B46B42694B1F7001EDA9E /* FeatureDataSource.swift */; };
+		356B46B92694B36F001EDA9E /* FeatureModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B46B82694B36F001EDA9E /* FeatureModels.swift */; };
+		356B46BC2694B3C9001EDA9E /* FeatureEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B46BB2694B3C9001EDA9E /* FeatureEndPoint.swift */; };
+		356B46BF2695D159001EDA9E /* FeatureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B46BE2695D159001EDA9E /* FeatureBuilder.swift */; };
 		35C387F326323C2000141DC4 /* PlaylistResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F026323C2000141DC4 /* PlaylistResponseModel.swift */; };
 		35C387F426323C2000141DC4 /* NetworkHelperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F126323C2000141DC4 /* NetworkHelperProtocols.swift */; };
 		35C387F526323C2000141DC4 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F226323C2000141DC4 /* NetworkClient.swift */; };
@@ -48,6 +57,15 @@
 
 /* Begin PBXFileReference section */
 		1993BB3C3A91CD2E685BCEF5 /* Pods-iOSRefactoringChallenge-iOSRefactoringChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSRefactoringChallenge-iOSRefactoringChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-iOSRefactoringChallenge-iOSRefactoringChallengeUITests/Pods-iOSRefactoringChallenge-iOSRefactoringChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		356B46A52694B0BF001EDA9E /* Feature.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feature.storyboard; sourceTree = "<group>"; };
+		356B46A72694B14F001EDA9E /* FeatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureViewController.swift; sourceTree = "<group>"; };
+		356B46AC2694B182001EDA9E /* FeaturePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturePresenter.swift; sourceTree = "<group>"; };
+		356B46AF2694B1A0001EDA9E /* FeatureUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureUseCase.swift; sourceTree = "<group>"; };
+		356B46B12694B1BF001EDA9E /* FeatureRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureRepository.swift; sourceTree = "<group>"; };
+		356B46B42694B1F7001EDA9E /* FeatureDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureDataSource.swift; sourceTree = "<group>"; };
+		356B46B82694B36F001EDA9E /* FeatureModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureModels.swift; sourceTree = "<group>"; };
+		356B46BB2694B3C9001EDA9E /* FeatureEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureEndPoint.swift; sourceTree = "<group>"; };
+		356B46BE2695D159001EDA9E /* FeatureBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureBuilder.swift; sourceTree = "<group>"; };
 		35C387F026323C2000141DC4 /* PlaylistResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistResponseModel.swift; sourceTree = "<group>"; };
 		35C387F126323C2000141DC4 /* NetworkHelperProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelperProtocols.swift; sourceTree = "<group>"; };
 		35C387F226323C2000141DC4 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -119,6 +137,94 @@
 			path = PlayListScreen;
 			sourceTree = "<group>";
 		};
+		356B46A42694B098001EDA9E /* FeatureMVPScreen */ = {
+			isa = PBXGroup;
+			children = (
+				356B46BD2695D10B001EDA9E /* builder_assembler */,
+				356B46B62694B204001EDA9E /* views */,
+				356B46B72694B35D001EDA9E /* Models */,
+				356B46BA2694B3AA001EDA9E /* RequestEndPoint */,
+				356B46B32694B1D6001EDA9E /* Repository */,
+				356B46AE2694B188001EDA9E /* UseCase */,
+				356B46AB2694B16A001EDA9E /* Presenters */,
+				356B46AA2694B160001EDA9E /* Controllers */,
+				356B46A92694B154001EDA9E /* Storyboard */,
+			);
+			path = FeatureMVPScreen;
+			sourceTree = "<group>";
+		};
+		356B46A92694B154001EDA9E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				356B46A52694B0BF001EDA9E /* Feature.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		356B46AA2694B160001EDA9E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				356B46A72694B14F001EDA9E /* FeatureViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		356B46AB2694B16A001EDA9E /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				356B46AC2694B182001EDA9E /* FeaturePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		356B46AE2694B188001EDA9E /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				356B46AF2694B1A0001EDA9E /* FeatureUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		356B46B32694B1D6001EDA9E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				356B46B12694B1BF001EDA9E /* FeatureRepository.swift */,
+				356B46B42694B1F7001EDA9E /* FeatureDataSource.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		356B46B62694B204001EDA9E /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		356B46B72694B35D001EDA9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				356B46B82694B36F001EDA9E /* FeatureModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		356B46BA2694B3AA001EDA9E /* RequestEndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				356B46BB2694B3C9001EDA9E /* FeatureEndPoint.swift */,
+			);
+			path = RequestEndPoint;
+			sourceTree = "<group>";
+		};
+		356B46BD2695D10B001EDA9E /* builder_assembler */ = {
+			isa = PBXGroup;
+			children = (
+				356B46BE2695D159001EDA9E /* FeatureBuilder.swift */,
+			);
+			path = builder_assembler;
+			sourceTree = "<group>";
+		};
 		35C387EE26323C2000141DC4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +281,6 @@
 				7CF4EB372B45E0DF2A13E192 /* Pods-iOSRefactoringChallengeTests.debug.xcconfig */,
 				839B4FB897551BEA90E60E9D /* Pods-iOSRefactoringChallengeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,6 +319,7 @@
 		DED886332555588D00A37DC2 /* iOSRefactoringChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				356B46A42694B098001EDA9E /* FeatureMVPScreen */,
 				35C387EE26323C2000141DC4 /* Networking */,
 				352F88A92631D921002371C5 /* PlayListScreen */,
 				DED886342555588D00A37DC2 /* AppDelegate.swift */,
@@ -354,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DED886462555589000A37DC2 /* LaunchScreen.storyboard in Resources */,
+				356B46A62694B0BF001EDA9E /* Feature.storyboard in Resources */,
 				DED886432555589000A37DC2 /* Assets.xcassets in Resources */,
 				DED8863E2555588D00A37DC2 /* PlayList.storyboard in Resources */,
 			);
@@ -484,13 +591,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				35C387F526323C2000141DC4 /* NetworkClient.swift in Sources */,
+				356B46BC2694B3C9001EDA9E /* FeatureEndPoint.swift in Sources */,
 				35C3881F2633050000141DC4 /* EndPointProtocol.swift in Sources */,
 				35C387F326323C2000141DC4 /* PlaylistResponseModel.swift in Sources */,
+				356B46B22694B1BF001EDA9E /* FeatureRepository.swift in Sources */,
 				35C388322633062C00141DC4 /* JSONParamEncoder.swift in Sources */,
+				356B46B92694B36F001EDA9E /* FeatureModels.swift in Sources */,
 				35C3880626324F9900141DC4 /* TrackListViewModel.swift in Sources */,
+				356B46AD2694B182001EDA9E /* FeaturePresenter.swift in Sources */,
+				356B46A82694B14F001EDA9E /* FeatureViewController.swift in Sources */,
 				35C387F426323C2000141DC4 /* NetworkHelperProtocols.swift in Sources */,
+				356B46BF2695D159001EDA9E /* FeatureBuilder.swift in Sources */,
+				356B46B52694B1F7001EDA9E /* FeatureDataSource.swift in Sources */,
 				DED886392555588D00A37DC2 /* TrackListViewController.swift in Sources */,
 				DED886352555588D00A37DC2 /* AppDelegate.swift in Sources */,
+				356B46B02694B1A0001EDA9E /* FeatureUseCase.swift in Sources */,
 				DED886372555588D00A37DC2 /* SceneDelegate.swift in Sources */,
 				35C3882D263305E700141DC4 /* NetworkError.swift in Sources */,
 				35C387FD2632471800141DC4 /* PlaylistEndPoint.swift in Sources */,

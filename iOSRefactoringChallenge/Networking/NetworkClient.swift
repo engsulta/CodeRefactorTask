@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 typealias NetworkCompletion = (_ response: Decodable?, _ error: NetworkError?) -> Void
 typealias NetworkDataCompletion<T: Decodable> = (_ result: Result<T,Error>) -> Void
-extension Reactive where Base: NetworkClientProtocol {
+extension Reactive where Base: NetworkClient {
     func request<T: Decodable>(_ endPoint: EndPointProtocol, model: T.Type) -> Single<Decodable> {
         return Single.create { [weak base] single in
 //            let cancellable = base?.fetch(endPoint: endPoint, model: model) { result in
@@ -30,7 +30,7 @@ extension Reactive where Base: NetworkClientProtocol {
 
 
 /// protocol for client api
-protocol NetworkClientProtocol: AnyObject, ReactiveCompatible {
+protocol NetworkClientProtocol: AnyObject {
     var session: URLSessionProtocol { get }
     var baseURL: String { get }
     @discardableResult
@@ -43,7 +43,7 @@ protocol NetworkClientProtocol: AnyObject, ReactiveCompatible {
 }
 
 /// concrete implementation for the client protocol
-class NetworkClient: NetworkClientProtocol {
+class NetworkClient: NetworkClientProtocol,ReactiveCompatible {
 
     var baseURL: String
     var session: URLSessionProtocol

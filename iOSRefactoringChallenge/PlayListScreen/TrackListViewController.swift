@@ -61,4 +61,11 @@ extension TrackListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = viewModel?.trackTitle(for: indexPath)
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let featAssembler: Assembler = FeatureAssembler()
+        if let vc = featAssembler.resolve() {
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
 }
