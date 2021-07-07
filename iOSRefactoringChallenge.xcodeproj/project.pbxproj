@@ -17,6 +17,10 @@
 		356B46B92694B36F001EDA9E /* FeatureModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B46B82694B36F001EDA9E /* FeatureModels.swift */; };
 		356B46BC2694B3C9001EDA9E /* FeatureEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B46BB2694B3C9001EDA9E /* FeatureEndPoint.swift */; };
 		356B46BF2695D159001EDA9E /* FeatureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B46BE2695D159001EDA9E /* FeatureBuilder.swift */; };
+		3590800C269602D800618995 /* FeatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35908007269602D800618995 /* FeatureViewModel.swift */; };
+		3590800D269602D800618995 /* Feature2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35908009269602D800618995 /* Feature2ViewController.swift */; };
+		3590800E269602D800618995 /* Feature2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3590800B269602D800618995 /* Feature2.storyboard */; };
+		35908011269611FA00618995 /* Feat2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35908010269611FA00618995 /* Feat2Builder.swift */; };
 		35C387F326323C2000141DC4 /* PlaylistResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F026323C2000141DC4 /* PlaylistResponseModel.swift */; };
 		35C387F426323C2000141DC4 /* NetworkHelperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F126323C2000141DC4 /* NetworkHelperProtocols.swift */; };
 		35C387F526323C2000141DC4 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C387F226323C2000141DC4 /* NetworkClient.swift */; };
@@ -66,6 +70,10 @@
 		356B46B82694B36F001EDA9E /* FeatureModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureModels.swift; sourceTree = "<group>"; };
 		356B46BB2694B3C9001EDA9E /* FeatureEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureEndPoint.swift; sourceTree = "<group>"; };
 		356B46BE2695D159001EDA9E /* FeatureBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureBuilder.swift; sourceTree = "<group>"; };
+		35908007269602D800618995 /* FeatureViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureViewModel.swift; sourceTree = "<group>"; };
+		35908009269602D800618995 /* Feature2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature2ViewController.swift; sourceTree = "<group>"; };
+		3590800B269602D800618995 /* Feature2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feature2.storyboard; sourceTree = "<group>"; };
+		35908010269611FA00618995 /* Feat2Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feat2Builder.swift; sourceTree = "<group>"; };
 		35C387F026323C2000141DC4 /* PlaylistResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistResponseModel.swift; sourceTree = "<group>"; };
 		35C387F126323C2000141DC4 /* NetworkHelperProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelperProtocols.swift; sourceTree = "<group>"; };
 		35C387F226323C2000141DC4 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -225,6 +233,49 @@
 			path = builder_assembler;
 			sourceTree = "<group>";
 		};
+		359080052696028600618995 /* Feature2MVVMScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3590800F269611E800618995 /* builder */,
+				35908008269602D800618995 /* Controllers */,
+				35908006269602D800618995 /* viewModel */,
+				3590800A269602D800618995 /* Storyboard */,
+			);
+			path = Feature2MVVMScreen;
+			sourceTree = "<group>";
+		};
+		35908006269602D800618995 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				35908007269602D800618995 /* FeatureViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		35908008269602D800618995 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				35908009269602D800618995 /* Feature2ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3590800A269602D800618995 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3590800B269602D800618995 /* Feature2.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3590800F269611E800618995 /* builder */ = {
+			isa = PBXGroup;
+			children = (
+				35908010269611FA00618995 /* Feat2Builder.swift */,
+			);
+			path = builder;
+			sourceTree = "<group>";
+		};
 		35C387EE26323C2000141DC4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +370,7 @@
 		DED886332555588D00A37DC2 /* iOSRefactoringChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				359080052696028600618995 /* Feature2MVVMScreen */,
 				356B46A42694B098001EDA9E /* FeatureMVPScreen */,
 				35C387EE26323C2000141DC4 /* Networking */,
 				352F88A92631D921002371C5 /* PlayListScreen */,
@@ -463,6 +515,7 @@
 				356B46A62694B0BF001EDA9E /* Feature.storyboard in Resources */,
 				DED886432555589000A37DC2 /* Assets.xcassets in Resources */,
 				DED8863E2555588D00A37DC2 /* PlayList.storyboard in Resources */,
+				3590800E269602D800618995 /* Feature2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +643,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3590800C269602D800618995 /* FeatureViewModel.swift in Sources */,
+				3590800D269602D800618995 /* Feature2ViewController.swift in Sources */,
 				35C387F526323C2000141DC4 /* NetworkClient.swift in Sources */,
 				356B46BC2694B3C9001EDA9E /* FeatureEndPoint.swift in Sources */,
 				35C3881F2633050000141DC4 /* EndPointProtocol.swift in Sources */,
@@ -600,6 +655,7 @@
 				35C3880626324F9900141DC4 /* TrackListViewModel.swift in Sources */,
 				356B46AD2694B182001EDA9E /* FeaturePresenter.swift in Sources */,
 				356B46A82694B14F001EDA9E /* FeatureViewController.swift in Sources */,
+				35908011269611FA00618995 /* Feat2Builder.swift in Sources */,
 				35C387F426323C2000141DC4 /* NetworkHelperProtocols.swift in Sources */,
 				356B46BF2695D159001EDA9E /* FeatureBuilder.swift in Sources */,
 				356B46B52694B1F7001EDA9E /* FeatureDataSource.swift in Sources */,
