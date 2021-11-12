@@ -28,8 +28,16 @@ class Feature2ViewController: UIViewController {
             .subscribe(onNext: { model in
                 // show products
             }).disposed(by: viewModel!.disposeBag)
+        // or
 
         // request models
-        viewModel?.getResponseModel(for: GetCatalogProductsRequestValues(catalogId: "id"))
+        viewModel?.getResponseModel(for: GetCatalogProductsRequestValues(catalogId: "id"))?.asObservable()
+            .subscribe(onNext: { model in
+                // show products
+            }, onError: { [weak self] error in
+                //            self?.loadingBehavioralRelay?.accept(false)
+                //            self?.showError?.accept(error)
+            }).disposed(by: viewModel!.disposeBag)
+
     }
 }

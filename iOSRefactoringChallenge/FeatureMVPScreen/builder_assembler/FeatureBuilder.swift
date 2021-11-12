@@ -33,7 +33,6 @@ class FeatureAssembler: Assembler {
     func resolve() -> FeatureDataSourceProtocol {
         return FeatureRemoteDataSource()
     }
-
 }
 
 func globalTestCall() {

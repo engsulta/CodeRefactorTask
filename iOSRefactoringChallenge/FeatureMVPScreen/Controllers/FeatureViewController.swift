@@ -19,7 +19,7 @@ class FeatureViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         presenter?.getResponseModel(for: GetCatalogProductsRequestValues(catalogId: "id"))
 
     }

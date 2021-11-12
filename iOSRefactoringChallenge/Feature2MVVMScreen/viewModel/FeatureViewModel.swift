@@ -46,17 +46,18 @@ class MyFeatureViewModel: FeatureViewModel {
 
     func getResponseModel(for params: RequestValues) -> Single<Decodable>? {
         loadingBehavioralRelay?.accept(true)
-        useCase?.execute(for: params)?
-            .asObservable()
-            .subscribe(onNext: { [weak self] model in
-                self?.loadingBehavioralRelay?.accept(false)
-            guard let products = model as? ResponseModel else { return }
-                // do some filteration and ui mapping on products to be fit for the ui
-                self?.showProducts?.accept(products)
-        }, onError: { [weak self] error in
-            self?.loadingBehavioralRelay?.accept(false)
-            self?.showError?.accept(error)
-        }).disposed(by: disposeBag)
-       return nil
+        return useCase?.getResponseModel(for: params)
+//        useCase?.getResponseModel(for: params)?
+//            .asObservable()
+//            .subscribe(onNext: { [weak self] model in
+//                self?.loadingBehavioralRelay?.accept(false)
+//            guard let products = model as? ResponseModel else { return }
+//                // do some filteration and ui mapping on products to be fit for the ui
+//                self?.showProducts?.accept(products)
+//        }, onError: { [weak self] error in
+//            self?.loadingBehavioralRelay?.accept(false)
+//            self?.showError?.accept(error)
+//        }).disposed(by: disposeBag)
+//       return nil
     }
 }

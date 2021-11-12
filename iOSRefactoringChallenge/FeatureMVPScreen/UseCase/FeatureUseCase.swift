@@ -12,7 +12,7 @@ import RxSwift
 protocol UseCase {
     associatedtype T
     associatedtype Q
-    func execute(for params: Q) -> Single<T>?
+    func getResponseModel(for params: Q) -> Single<T>?
 }
 
 class FeatureUseCase: UseCase {
@@ -24,7 +24,7 @@ class FeatureUseCase: UseCase {
         self.repository = repository
     }
 
-    func execute(for params: Q) -> Single<T>? {
+    func getResponseModel(for params: Q) -> Single<T>? {
         return repository?.getResponseModel(for: params)
     }
 

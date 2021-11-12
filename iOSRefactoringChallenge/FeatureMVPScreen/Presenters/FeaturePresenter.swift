@@ -15,10 +15,11 @@ protocol Presenter {
     var disposeBag: DisposeBag { get }
     var loadingBehavioralRelay: BehaviorRelay<Bool>? { get }
 }
+
 protocol FeaturePresenter: Presenter {
     func getResponseModel(for params: RequestValues)
-
 }
+
 class MyFeaturePresenter: FeaturePresenter {
 
     var disposeBag: DisposeBag = DisposeBag()
@@ -40,7 +41,7 @@ class MyFeaturePresenter: FeaturePresenter {
 
     func getResponseModel(for params: RequestValues) {
         loadingBehavioralRelay?.accept(true)
-        useCase?.execute(for: params)?
+        useCase?.getResponseModel(for: params)?
             .asObservable()
             .subscribe(onNext: { [weak self] model in
                 self?.loadingBehavioralRelay?.accept(false)
